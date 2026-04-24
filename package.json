@@ -1,0 +1,9 @@
+{
+  "name": "ecommerce-project-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root launcher for backend and frontend",
+  "scripts": {
+    "start": "node start.js"
+  }
+}
