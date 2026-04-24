@@ -1,0 +1,9 @@
+{
+  "name": "ecommerce-frontend-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static frontend for the microservices e-commerce backend assessment project",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

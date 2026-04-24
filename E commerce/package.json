@@ -1,0 +1,37 @@
+{
+  "name": "microservices-ecommerce-mvp",
+  "version": "1.0.0",
+  "description": "Microservices-based e-commerce backend MVP with API gateway and Swagger",
+  "main": "index.js",
+  "scripts": {
+    "start:product": "node services/product-service/src/server.js",
+    "start:customer": "node services/customer-service/src/server.js",
+    "start:order": "node services/order-service/src/server.js",
+    "start:payment": "node services/payment-service/src/server.js",
+    "start:gateway": "node gateway/src/server.js",
+    "start:all": "concurrently -k -n PRODUCT,CUSTOMER,ORDER,PAYMENT,GATEWAY -c blue,green,magenta,yellow,cyan \"npm run start:product\" \"npm run start:customer\" \"npm run start:order\" \"npm run start:payment\" \"npm run start:gateway\""
+  },
+  "keywords": [
+    "microservices",
+    "ecommerce",
+    "express",
+    "swagger",
+    "api-gateway"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "http-proxy-middleware": "^3.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^14.0.0"
+  }
+}
